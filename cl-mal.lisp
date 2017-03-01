@@ -66,7 +66,7 @@
 
 (defun delete-entry (id &key (username *username*) (password *password*))
   "Remove the anime with ID from the list."
-  (check-type id media-id)
+  (check-type id (member media-id entry))
   (check-type username string)
   (check-type password string)
   (multiple-value-bind (response code)
