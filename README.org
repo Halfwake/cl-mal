@@ -1,3 +1,5 @@
+* Oh god, this is a huge WIP everything is FUBAR right now.
+
 * Common Lisp - My Anime List
 
 MAL, My Anime List, is a list of anime and LISP stands for List Processing, so I made this Common Lisp library for talking to the MAL server.
@@ -11,6 +13,8 @@ All API functions take keyword arguments for user credentials.
 
 (media-search :anime "my-query terms" :username "me" :password "password1")
 (add-entry (make-instance 'anime-id 4) :username "me" :password "password1")
+(update-entry (make-instance 'media-id 4) :username "me" :password "password1")
+(delete-entry (make-instance 'media-id 4) :username "me" :password "password1")
 
 #+END_SRC
 
