@@ -1,0 +1,30 @@
+* Common Lisp - My Anime List
+
+MAL, My Anime List, is a list of anime and LISP stands for List Processing, so I made this Common Lisp library for talking to the MAL server.
+
+** Authentication
+
+All API functions take keyword arguments for user credentials.
+
+#+NAME authenticate
+#+BEGIN_SRC lisp
+
+(media-search :anime "my-query terms" :username "me" :password "password1")
+(add-entry (make-instance 'anime-id 4) :username "me" :password "password1")
+
+#+END_SRC
+
+ is stored in two special variables. You can reassign them or shadow them.
+
+#+NAME authenticate
+#+BEGIN_SRC lisp
+
+;; Reassign variables and search with credentials.
+(setf *username* "me")
+(setf *password* "password1")
+(media-search :anime "monster")
+
+#+END_SRC
+
+
+
