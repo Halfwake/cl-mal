@@ -19,3 +19,11 @@
 (defclass manga-id (media-id)
   ((id-number :initarg :id :reader id-number))
   (:documentation "A manga ID."))
+
+(defun make-anime-id (id-number)
+  "Make an anime-id object with the given ID-NUMBER."
+  (make-instance 'anime-id :id id-number))
+
+(defun make-manga-id (id-number)
+  "Make an manga-id object with the given ID-NUMBER."
+  (make-instance 'manga-id :id id-number))
