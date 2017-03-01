@@ -13,7 +13,7 @@
   (with-slots (id title english synonyms episodes type status
 		  start-date end-date synonpsis image)
       entry
-    (check-type id fixnum)
+    (check-type id media-id)
     (check-type title string)
     (check-type english string)
     (check-type synonyms list)

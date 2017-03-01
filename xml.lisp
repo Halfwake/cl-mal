@@ -13,7 +13,7 @@
   (flet ((get-field (item)
 	   (first (last (assoc item (cddr xml) :test #'string=)))))
     (make-instance 'entry
-		   :id (parse-integer (get-field "id"))
+		   :id (make-anime-id (parse-integer (get-field "id")))
 		   :title (get-field "title")
 		   :english (or (get-field "english") "")
 		   :synonyms (loop for string in
